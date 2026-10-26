@@ -1,0 +1,27 @@
+name: Rhombus
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "16.0"
+packages:
+  RhombusCore:
+    path: Core
+targets:
+  Rhombus:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - package: RhombusCore
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Rhombus
+        UILaunchScreen: {}
+        UIUserInterfaceStyle: Light
+        NSMicrophoneUsageDescription: Rhombus listens to your voice commands to manage products and features.
+        NSSpeechRecognitionUsageDescription: Rhombus transcribes your voice commands.
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.example.rhombus
+      MARKETING_VERSION: "1.0"
+      CURRENT_PROJECT_VERSION: "1"
